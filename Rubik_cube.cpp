@@ -1,8 +1,8 @@
 //
-// Created by Shubham Patil on 17/12/21.
+
 //
 
-#include "RubiksCube.h"
+#include "rubikcube.h"
 
 //
 //Given a color return it's first letter
@@ -26,7 +26,7 @@ char RubiksCube::getColorLetter(COLOR color) {
 }
 
 /*
- * Describe a move using an index
+ * Describe a move using an index by the help of the switch case statement
  */
 string RubiksCube::getMove(MOVE ind) {
     switch (ind) {
@@ -70,7 +70,7 @@ string RubiksCube::getMove(MOVE ind) {
 }
 
 /*
- * Perform a move operation on using a Move index.
+ * Perform operations on using a Move index.
  */
 RubiksCube &RubiksCube::move(MOVE ind) {
     switch (ind) {
@@ -161,14 +161,14 @@ void RubiksCube::print() const {
     cout << "Rubik's Cube:\n\n";
 
     for (int row = 0; row <= 2; row++) {
-        for (unsigned i = 0; i < 7; i++) cout << " ";
+        for (int i = 0; i < 7; i++) cout << " ";
         for (int col = 0; col <= 2; col++) {
             cout << getColorLetter(getColor(FACE::UP, row, col)) << " ";
         }
-        cout << "\n";
+        cout << "endl";
     }
 
-    cout << "\n";
+    cout << "endl";
 
     for (int row = 0; row <= 2; row++) {
 
